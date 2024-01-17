@@ -1,0 +1,135 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "a b b b"
+    "a b b b";
+  font-size: 20px;
+  color: white;
+}
+
+.nav-control {
+  margin: 10px;
+  text-align: center;
+  padding: 10px 20px 20px;
+  grid-area: a;
+  background-color: rgb(31, 50, 68);
+}
+
+.bar-options
+{
+  display: flex;
+  flex-flow: column;  
+}
+
+.btn-opt
+{
+  background-color: rgb(174, 174, 176);
+  padding: 10px 20px;
+  margin: 15px 10px 0 10px;
+  font-size: 0.8em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-opt:hover {
+  color: rgb(174, 174, 176);
+  background-color: black;
+}
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0 0 0;
+  display: none;
+  background-color: #252323;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.dropdown-content input{
+  margin: 10px 0;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+
+.view {
+  margin: 10px;
+  text-align: center;
+  padding: 10px 20px;
+  grid-area: b;
+  background-color: burlywood;
+  display: flex;
+  flex-direction: column;
+}
+
+#span-conf
+{
+  margin: 10px;
+  width: 600px;
+  height: 400px;
+  background-color: #110f0f;
+}
+
+#span-view
+{
+  margin: 10px;
+  width: 600px;
+  height: 400px;
+  background-color: #110f0f;
+}
+
+#span-title
+{
+  display: none;
+}
+
+#span-subtitle
+{
+  display: none;
+}
+
+#span-text
+{
+  display: none;
+}
+
+#span-list
+{
+  display: none;
+}
+
+#span-link
+{
+  display: none;
+}
+
+#span-image
+{
+  display: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal p {
+  margin-bottom: 10px;
+}
+
+.modal button {
+  margin-right: 10px;
+}
