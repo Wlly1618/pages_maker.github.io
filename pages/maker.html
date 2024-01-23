@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/wrapper.css">
-    <title>Navbar Example</title>
+    <title>Maker</title>
 </head>
 <body>
 
@@ -20,10 +20,31 @@
         <div class="bar-options">
             <button onclick="toggleDropdown('title')" id="btn-title" class="btn-opt">Title</button>
             <div id="dropdown-title" class="dropdown-content">
-                <div><label for="">id</label><input type="text"></div>
-                <div><label for="">id</label><input type="text"></div>
-                <div><label for="">id</label><input type="text"></div>
-                <div><label for="">id</label><input type="text"></div>
+                <div class="input-text">
+                    <div><label for="title">Input</label><input id="title" type="text"></div>
+                </div>
+                <div class="input-range">
+                    <div>Color</div>
+                    <div><label for="range-red">R</label><input type="range" name="range-red" id="range-title-red" min="0" max="255"></div>
+                    <div><label for="range-green">G</label><input type="range" name="range-green" id="range-title-green" min="0" max="255"></div>
+                    <div><label for="range-blue">B</label><input type="range" name="range-blue" id="range-title-blue" min="0" max="255"></div>
+                </div>
+                <div class="input-range">
+                    <div>Background Color</div>
+                    <div><label for="range-red">R</label><input type="range" name="range-red" id="range-bg-title-red" min="0" max="255"></div>
+                    <div><label for="range-green">G</label><input type="range" name="range-green" id="range-bg-title-green" min="0" max="255"></div>
+                    <div><label for="range-blue">B</label><input type="range" name="range-blue" id="range-bg-title-blue" min="0" max="255"></div>
+                </div>
+                <div>
+                    <select id="fontSelector-title" onchange="select_font('title')">
+                        <option value="Arial">Arial</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Courier New">Courier New</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Lato-black">Lato-black</option>
+                        <option value="Noto Sans Mono">Noto Sans Mono</option>
+                    </select>
+                </div>
             </div>
             <button onclick="toggleDropdown('subtitle')" id="btn-subtitle" class="btn-opt">Sub Title</button>
             <div id="dropdown-subtitle" class="dropdown-content">
@@ -64,7 +85,7 @@
     </div>
     <div class="view"> View 
         <span id="span-conf">
-            <span id="span-title"> <input type="text"> </span>
+            <span id="span-title"></span>
             <span id="span-subtitle"> <input type="text"> </span>
             <span id="span-text"> <input type="text"> </span>
             <span id="span-list"> <div id="input-list"></div> </span>
